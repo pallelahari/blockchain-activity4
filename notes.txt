@@ -1,0 +1,8 @@
+Extra safety/UX touches:
+- Validate recipient address using viem.getAddress() (throws on invalid address).
+- Disable Send button while a transaction is in flight to avoid double sending.
+- LocalStorage saves selected team and token address for convenience.
+
+Issues & fixes:
+- Initially saw "Returned no data (0x)" — fixed by verifying token address and ensuring chain was switched in MetaMask.
+- If watchContractEvent doesn't fire in some browsers, app still provides a manual Refresh button.
